@@ -150,12 +150,12 @@ main (int argc, char *argv[])
 }             
         </para>
         <para>
-            A program a mandelbrot halmaz vizualizációját hivatott megvalósítani.
-            A void mandel szekcióbana mandelbrot halmaz definiálása történik meg.
-            (Általánosan, hétköznapi nyelvben a mandelbrot halmaz egy z n+1-edik elemét (xn^2)+c -képpen írhatjuk fel.)
-            A fent említett képlet komplex számokkal végezendő.
-            Ezért a "koordináta rendszer" melyben a mandelbrot halmazt jelenítjük meg egy griden, melynek csomópontjai kompex számok.
-            A mainben a halmaz elemeihez, azaz a kirajzolandó pontokhoz a fekete színt rendeljük, az adott iterációs határon belül.
+            A kód a mandelbrot halmazt vizualizálja.
+            a Void mandle halmazban definiáljuk a halmazt.
+            (Matematikailag a halmaz egyik z n+1-edik elemét (xn^2)+c -képpen írhatjuk fel.)
+            Komplex számokkal végezzük el a fenti műveletet
+            Emiatt van egy koordináta rendszerünk, melyet griddel jelenítünk meg, és csomópontjait komplex számok alkotják.
+            A halmaz elemeihez, a fekete színt rendeljük a kiírandó pontokhoz, a megadott határokon belül.
             (Az iterációs határ fontos szerepet tölt be , hiszen ha a számok nem esnek bele ebbe az iterációs határba, akkor nem elemai a halmaznak, azaz a végtelenbe is 'ugorhatnak/ugranak'.)
         </para>
     </section>        
@@ -298,8 +298,9 @@ main ( int argc, char *argv[] )
             Megoldás forrása: <link xlink:href="https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/Biomorf">https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/Biomorf</link>
         </para>
         <para>
-            A fent prezentált mandelbrot halmaz létrehozására és vizualizálására elkészített programokat vesszük alapul.
-            A "complex" headerrel ellátott programba egy képlet implementálásával biomorf képet kapunk. (jelen esetben z_n = z_n * z_n + c; ----default mandelbrot halmaz----)
+           Ahhoz, hogy vizualizáljuk és prezentáljuk a fent elkészített mandelbrot halmazt elkészített programokat veszünk alapul.
+            A "complex" headerrel ellátott programba egy képlet implementálásával biomorf képet kapunk. (jelen esetben z_n = z_n * z_n 
+		+ c; ----default mandelbrot halmaz----)
         </para>                        
     </section>                     
 
@@ -492,10 +493,10 @@ main (int argc, char *argv[])
 }
         </para>
         <para>
-            A CUDA kártyás megoldás látványosan gyorsabb, mint a fent taglalt "default" programunk.
-            Az első programban a CPU-nk egy szála dolgozik, míg a CUDA (GPU) esetében 60x60x100 szál.
-            Így párhuzamosan tudjuk kszámolni az egyes pontokat.
-            Ez a gyorsaság a beépített delta clock() funkció segítségével még szemléletesebb.(ezzel tudjuk mérni az időt)
+            A CUDA-s megoldás gyorsabb mint a fent prezentált programunk.
+            Az első program a processzorunkat veszi igénybe. míg ez a videókártyánkat ezért a CUDA (GPU) esetében 60x60x100 szál dolgozik.
+           Ezáltal párhuzamosan számolunk ki pontokat.
+            A gyorsaságunk a 'delta clock()' funkció miatt még látványosabb.(időt mérünk vele)
         </para>
     </section>                     
 
@@ -642,8 +643,9 @@ void FrakAblak::vissza(void)
 
         </para>
         <para>
-           A programunk a mandelbrot halmaz ablakának nagyságát felveszi, majd az egér kattintásával és mozgatásával keletkezett objektum bal felső sarkát (kiinduló pont) számolja, ki, s a kijelölt rész többi tagját ehhez számolja.
-           A gomb elengedését követően a program a rendelkezésre álló ablakot kitölti a kijelölt résszel, mintegy felnagyítja azt.
+          Felveszi a programunk a mandelbrot halmaz nagyságát, ezután a kattintással létrehozott objektum
+		kiinduló, azaz a bal felső sarkát számolja ki, és a kijelölt rész többi tagját ehhez igazítja.
+           Az egérgomb felengedését követően felnagyítja ezt..
             
             A header file linkje : https://sourceforge.net/p/udprog/code/ci/master/tree/source/kozepes/Qt/mandel_nagyito/frakablak.h
         </para>

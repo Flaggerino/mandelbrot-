@@ -656,6 +656,7 @@ void FrakAblak::vissza(void)
     <section>
         <title>Mandelbrot nagyító és utazó Java nyelven</title>
         <para>
+		<programlisting><![CDATA[ 
  /*
  * MandelbrotHalmazNagyító.java
  *

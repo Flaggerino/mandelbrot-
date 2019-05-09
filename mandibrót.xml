@@ -156,7 +156,9 @@ main (int argc, char *argv[])
             Komplex számokkal végezzük el a fenti műveletet
             Emiatt van egy koordináta rendszerünk, melyet griddel jelenítünk meg, és csomópontjait komplex számok alkotják.
             A halmaz elemeihez, a fekete színt rendeljük a kiírandó pontokhoz, a megadott határokon belül.
-            (Az iterációs határ fontos szerepet tölt be , hiszen ha a számok nem esnek bele ebbe az iterációs határba, akkor nem elemai a halmaznak, azaz a végtelenbe is 'ugorhatnak/ugranak'.)
+            (Az iterációs határ fontos szerepet tölt be , hiszen ha a számok nem esnek bele ebbe az iterációs 
+		határba, akkor nem elemai a halmaznak, azaz a végtelenbe is 'ugorhatnak/ugranak'.)
+	    Tutor: Rémiás Dávid
         </para>
     </section>        
         
@@ -497,6 +499,7 @@ main (int argc, char *argv[])
             Az első program a processzorunkat veszi igénybe. míg ez a videókártyánkat ezért a CUDA (GPU) esetében 60x60x100 szál dolgozik.
            Ezáltal párhuzamosan számolunk ki pontokat.
             A gyorsaságunk a 'delta clock()' funkció miatt még látványosabb.(időt mérünk vele)
+	   Tutor: Rémiás Dávid
         </para>
     </section>                     
 
@@ -645,7 +648,7 @@ void FrakAblak::vissza(void)
         <para>
           Felveszi a programunk a mandelbrot halmaz nagyságát, ezután a kattintással létrehozott objektum
 		kiinduló, azaz a bal felső sarkát számolja ki, és a kijelölt rész többi tagját ehhez igazítja.
-           Az egérgomb felengedését követően felnagyítja ezt..
+           Az egérgomb felengedését követően felnagyítja ezt. Tutor: Rémiás Dávid
             
             A header file linkje : https://sourceforge.net/p/udprog/code/ci/master/tree/source/kozepes/Qt/mandel_nagyito/frakablak.h
         </para>

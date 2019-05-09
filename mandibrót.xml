@@ -16,6 +16,7 @@
         </para>
         <para>
             Megoldás forrása:  
+		<programlisting><![CDATA[
 // mandelpngt.c++
 // Copyright (C) 2019
 // Norbert Bátfai, batfai.norbert@inf.unideb.hu
@@ -148,6 +149,7 @@ main (int argc, char *argv[])
     std::cout << argv[1] << " mentve" << std::endl;
 
 }             
+		]]></programlisting>
         </para>
         <para>
             A kód a mandelbrot halmazt vizualizálja.
@@ -172,6 +174,7 @@ main (int argc, char *argv[])
         </para>
         <para>
             Megoldás forrása:   // Verzio: 3.1.2.cpp
+		<programlisting><![CDATA[
 // Forditas:
 // g++ 3.1.2.cpp -lpng -O3 -o 3.1.2
 // Futtatas:
@@ -276,16 +279,9 @@ main ( int argc, char *argv[] )
   kep.write ( argv[1] );
   std::cout << "\r" << argv[1] << " mentve." << std::endl;
 
-}
+}	]]></programlisting>
 
-             <para>
-                 
-                 Az előző programhoz hasonló módon működik.
-                 Jelen esetben a munkát a "complex" header könnyíti.
-                 
-                              
-             </para>
-             
+         
         </para>
     </section>        
                 
@@ -315,6 +311,7 @@ main ( int argc, char *argv[] )
         </para>
         <para>
             Megoldás forrása:  
+		<programlisting><![CDATA[
 // mandelpngc_60x60_100.cu
 // Copyright (C) 2019
 // Norbert Bátfai, batfai.norbert@inf.unideb.hu
@@ -493,6 +490,7 @@ main (int argc, char *argv[])
   std::cout << (float) delta / CLOCKS_PER_SEC << " sec" << std::endl;
 
 }
+		]]></programlisting>
         </para>
         <para>
             A CUDA-s megoldás gyorsabb mint a fent prezentált programunk.
@@ -519,6 +517,7 @@ main (int argc, char *argv[])
         </para>
         <para>
             Megoldás forrása:  
+		<programlisting><![CDATA[
 // frakablak.cpp
 //
 // Mandelbrot halmaz nagyító
@@ -643,7 +642,7 @@ void FrakAblak::vissza(void)
     szamitasFut = false;
     x = y = mx = my = 0;
 }
-
+		]]></programlisting>
         </para>
         <para>
           Felveszi a programunk a mandelbrot halmaz nagyságát, ezután a kattintással létrehozott objektum
@@ -806,7 +805,7 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
         // aktuális nagyítási pontossággal:
         new MandelbrotHalmazNagyító(-2.0, .7, -1.35, 1.35, 600, 255);
     }
-}                
+}                ]]></programlisting>
         </para>
     </section>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
